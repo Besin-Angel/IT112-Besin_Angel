@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    printf("*****************************************\n");
+    printf("*                                       *\n");
+    printf("*      >>> CODE • CREATE • CONQUER <<<  *\n");
+    printf("*                                       *\n");
+    printf("*       Computer Programming 1          *\n");
+    printf("*       Welcome to the World of C       *\n");
+    printf("*                                       *\n");
+    printf("*****************************************\n");
+    
+    return 0;
+}
