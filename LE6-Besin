@@ -1,0 +1,94 @@
+#include <stdio.h>
+ 
+/* Function prototypes */
+int    addition(int a, int b);
+int    subtraction(int a, int b);
+int    multiplication(int a, int b);
+double division(int a, int b);
+void   displayTitle(void);
+void   displayMenu(void);
+ 
+int main(void)
+{
+    int num1, num2, choice;
+ 
+    do
+    {
+        displayTitle();
+ 
+        printf("\nEnter first number: ");
+        scanf("%d", &num1);
+        printf("Enter second number: ");
+        scanf("%d", &num2);
+ 
+        displayMenu();
+ 
+        printf("\nEnter choice [1-5]: ");
+        scanf("%d", &choice);
+        printf("\n");
+ 
+        switch (choice)
+        {
+            case 1:
+                printf("%d + %d = %d\n", num1, num2, addition(num1, num2));
+                break;
+            case 2:
+                printf("%d - %d = %d\n", num1, num2, subtraction(num1, num2));
+                break;
+            case 3:
+                printf("%d * %d = %d\n", num1, num2, multiplication(num1, num2));
+                break;
+            case 4:
+                if (num2 == 0)
+                    printf("Error: Cannot divide by zero.\n");
+                else
+                    printf("%d / %d = %.2f\n", num1, num2, division(num1, num2));
+                break;
+            case 5:
+                printf("Exiting program ...\n");
+                break;
+            default:
+                printf("Invalid choice! Please choose from 1 to 5.\n");
+        }
+ 
+        printf("\n");
+ 
+    } while (choice != 5);
+ 
+    return 0;
+}
+void displayTitle(void)
+{
+    printf("Multiple functions to perform Arithmetic Operations\n");
+}
+ 
+void displayMenu(void)
+{
+    printf("\nChoose Operation:\n");
+    printf("[1] Addition\n");
+    printf("[2] Subtraction\n");
+    printf("[3] Multiplication\n");
+    printf("[4] Division\n");
+    printf("[5] Exit Program\n");
+}
+ 
+int addition(int a, int b)
+{
+    return a + b;
+}
+ 
+int subtraction(int a, int b)
+{
+    return a - b;
+}
+ 
+int multiplication(int a, int b)
+{
+    return a * b;
+}
+ 
+double division(int a, int b)
+{
+    return (double)a / b;
+}
+ 
